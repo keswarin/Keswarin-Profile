@@ -53,8 +53,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				portfolio: {
-					'hero-bg': 'hsl(var(--portfolio-hero-bg))',
-					'section-bg': 'hsl(var(--portfolio-section-bg))',
+					'sidebar-bg': 'hsl(var(--portfolio-sidebar-bg))',
+					'main-bg': 'hsl(var(--portfolio-main-bg))',
+					'card-bg': 'hsl(var(--portfolio-card-bg))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

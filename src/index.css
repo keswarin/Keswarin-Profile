@@ -39,10 +39,11 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     
     /* Portfolio specific tokens */
-    --portfolio-hero-bg: 220 13% 99%;
-    --portfolio-section-bg: 220 13% 97%;
-    --portfolio-card-shadow: 220 13% 18% / 0.08;
-    --portfolio-card-shadow-hover: 220 13% 18% / 0.15;
+    --portfolio-sidebar-bg: 0 0% 98%;
+    --portfolio-main-bg: 0 0% 96%;
+    --portfolio-card-bg: 0 0% 100%;
+    --portfolio-card-shadow: 220 13% 18% / 0.05;
+    --portfolio-card-shadow-hover: 220 13% 18% / 0.1;
 
     --sidebar-background: 0 0% 98%;
 
@@ -91,10 +92,11 @@ All colors MUST be HSL.
     --ring: 188 94% 42%;
     
     /* Portfolio specific tokens for dark mode */
-    --portfolio-hero-bg: 220 13% 11%;
-    --portfolio-section-bg: 220 13% 13%;
-    --portfolio-card-shadow: 0 0% 0% / 0.3;
-    --portfolio-card-shadow-hover: 0 0% 0% / 0.5;
+    --portfolio-sidebar-bg: 220 13% 12%;
+    --portfolio-main-bg: 220 13% 9%;
+    --portfolio-card-bg: 220 13% 14%;
+    --portfolio-card-shadow: 0 0% 0% / 0.2;
+    --portfolio-card-shadow-hover: 0 0% 0% / 0.3;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

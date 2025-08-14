@@ -1,16 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { SkillCard } from "@/components/ui/skill-card";
+import { ContactButton } from "@/components/ui/contact-button";
+import { TechStackItem } from "@/components/ui/tech-stack-item";
+import { ExperienceItem } from "@/components/ui/experience-item";
 import { ProjectCard } from "@/components/ui/project-card";
 import { 
-  Figma, 
-  Palette, 
-  Users, 
-  MousePointer, 
-  BarChart3, 
-  Code,
-  Linkedin,
+  MapPin,
   Github,
-  Mail
+  Facebook,
+  Instagram,
+  Phone,
+  Mail,
+  Download,
+  ExternalLink
 } from "lucide-react";
 import profileImage from "@/assets/profile-image.jpg";
 import project1Image from "@/assets/project-1.jpg";
@@ -18,180 +19,184 @@ import project2Image from "@/assets/project-2.jpg";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="bg-portfolio-hero-bg py-20 lg:py-32">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
-            <div className="flex-shrink-0">
-              <img 
-                src={profileImage}
-                alt="Profile"
-                className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg"
+    <div className="min-h-screen bg-portfolio-main-bg">
+      <div className="flex flex-col lg:flex-row">
+        {/* Sidebar */}
+        <aside className="lg:w-80 bg-portfolio-sidebar-bg p-6 lg:min-h-screen">
+          <div className="space-y-6">
+            {/* Profile Section */}
+            <div className="text-center">
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-border">
+                <img 
+                  src={profileImage}
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h1 className="text-2xl font-bold text-foreground mb-2">Alex Chen</h1>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Sr. UX/UI Designer | User Experience Specialist | Design Systems, Mobile Apps, Web Applications
+              </p>
+              <Button className="mt-4" size="sm">
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </Button>
+            </div>
+
+            {/* Contact Information */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 text-sm">
+                <MapPin className="h-4 w-4 text-muted-foreground" />
+                <span className="text-muted-foreground">Based in:</span>
+                <span className="font-medium text-foreground">Thailand</span>
+              </div>
+              
+              <ContactButton 
+                icon={Github}
+                label="alexchen"
+                href="https://github.com/alexchen"
+              />
+              
+              <ContactButton 
+                icon={Facebook}
+                label="Alex Chen"
+                href="https://facebook.com/alexchen"
+              />
+              
+              <ContactButton 
+                icon={Instagram}
+                label="@alexchen_ux"
+                href="https://instagram.com/alexchen_ux"
+              />
+              
+              <ContactButton 
+                icon={Mail}
+                label="alex.chen@example.com"
+                href="mailto:alex.chen@example.com"
+              />
+              
+              <ContactButton 
+                icon={Phone}
+                label="+66 12 345 6789"
+                href="tel:+66123456789"
               />
             </div>
-            <div className="text-center md:text-left flex-1">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground">
-                Alex Chen
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-6">
-                UX/UI Designer
-              </p>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-                I create meaningful digital experiences that bridge the gap between user needs and business goals. 
-                With a passion for clean design and intuitive interfaces, I help brands tell their story through thoughtful design.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button size="lg" className="rounded-xl">
-                  View My Work
-                </Button>
-                <Button variant="outline" size="lg" className="rounded-xl">
-                  Contact Me
-                </Button>
+
+            {/* Tech Stack */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold text-foreground">Tech Stack</h3>
+              <div className="flex flex-wrap gap-2">
+                <TechStackItem name="Figma" />
+                <TechStackItem name="Sketch" />
+                <TechStackItem name="Adobe XD" />
+                <TechStackItem name="Principle" />
+                <TechStackItem name="Framer" />
+                <TechStackItem name="HTML" />
+                <TechStackItem name="CSS" />
+                <TechStackItem name="JavaScript" />
+                <TechStackItem name="React" />
+                <TechStackItem name="Tailwind" />
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </aside>
 
-      {/* About Me Section */}
-      <section className="bg-portfolio-section-bg py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">About Me</h2>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                With over 5 years of experience in UX/UI design, I specialize in creating user-centered 
-                digital solutions that drive engagement and conversion. My approach combines strategic thinking 
-                with creative problem-solving to deliver designs that not only look beautiful but also 
-                function seamlessly.
-              </p>
-              <p>
-                I believe that great design is invisible – it should feel natural and intuitive to the user. 
-                My process involves deep user research, iterative prototyping, and close collaboration with 
-                development teams to ensure that the final product exceeds expectations.
-              </p>
-              <p>
-                When I'm not designing, you can find me exploring new design trends, contributing to open-source 
-                projects, or mentoring aspiring designers in the community.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills & Tools Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-              My Skills & Tools
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              <SkillCard 
-                icon={<Figma size={32} />} 
-                title="Figma" 
+        {/* Main Content */}
+        <main className="flex-1 p-6 lg:p-8 space-y-8">
+          {/* Experience Section */}
+          <section className="bg-portfolio-card-bg rounded-xl p-6 shadow-sm shadow-[hsl(var(--portfolio-card-shadow))]">
+            <h2 className="text-2xl font-bold mb-6 text-foreground">Experience</h2>
+            <div className="space-y-6">
+              <ExperienceItem
+                title="Senior UX/UI Designer"
+                company="Tech Solutions Co."
+                period="September 2021 - Present"
+                companyUrl="https://techsolutions.com"
               />
-              <SkillCard 
-                icon={<Palette size={32} />} 
-                title="Design Systems" 
+              <ExperienceItem
+                title="UX/UI Designer"
+                company="Digital Agency"
+                period="July 2019 - August 2021"
+                companyUrl="https://digitalagency.com"
               />
-              <SkillCard 
-                icon={<Users size={32} />} 
-                title="User Research" 
-              />
-              <SkillCard 
-                icon={<MousePointer size={32} />} 
-                title="Wireframing" 
-              />
-              <SkillCard 
-                icon={<BarChart3 size={32} />} 
-                title="Usability Testing" 
-              />
-              <SkillCard 
-                icon={<Code size={32} />} 
-                title="HTML/CSS" 
+              <ExperienceItem
+                title="Junior Designer"
+                company="StartupX"
+                period="March 2018 - June 2019"
+                companyUrl="https://startupx.com"
               />
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Projects Section */}
-      <section className="bg-portfolio-section-bg py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-              My Work
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-              <ProjectCard
-                image={project1Image}
-                title="FinTech Mobile App"
-                description="A comprehensive mobile banking app focused on simplifying financial management for millennials. The design emphasizes clarity and trust while maintaining a modern, approachable aesthetic."
-                tags={["UX Research", "Mobile App", "Prototyping", "User Testing"]}
+          {/* Education Section */}
+          <section className="bg-portfolio-card-bg rounded-xl p-6 shadow-sm shadow-[hsl(var(--portfolio-card-shadow))]">
+            <h2 className="text-2xl font-bold mb-6 text-foreground">Education</h2>
+            <div className="space-y-6">
+              <ExperienceItem
+                title="Bachelor of Fine Arts in Design"
+                company="University of Art & Design"
+                period="2014 - 2018"
               />
-              <ProjectCard
-                image={project2Image}
-                title="E-commerce Platform Redesign"
-                description="Complete redesign of an e-commerce platform that increased conversion rates by 35%. The project involved extensive user journey mapping and A/B testing to optimize the shopping experience."
-                tags={["E-commerce", "Web Design", "Conversion Optimization", "A/B Testing"]}
+              <ExperienceItem
+                title="Certificate in UX Design"
+                company="Design Institute"
+                period="2018"
               />
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Contact Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
-              Let's Get In Touch
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              I'm always interested in new opportunities and collaborations. 
-              Whether you have a project in mind or just want to chat about design, I'd love to hear from you.
-            </p>
-            <Button size="lg" className="rounded-xl text-lg px-8">
-              <Mail className="mr-2 h-5 w-5" />
-              alex.chen@example.com
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-portfolio-section-bg py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <p className="text-muted-foreground mb-6">© 2025 Alex Chen. All rights reserved.</p>
-            <div className="flex justify-center space-x-6">
-              <a 
-                href="#" 
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a 
-                href="#" 
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                aria-label="GitHub"
-              >
-                <Github size={24} />
-              </a>
-              <a 
-                href="#" 
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                aria-label="Email"
-              >
-                <Mail size={24} />
-              </a>
+          {/* Featured Projects */}
+          <section className="bg-portfolio-card-bg rounded-xl p-6 shadow-sm shadow-[hsl(var(--portfolio-card-shadow))]">
+            <div className="flex items-center gap-2 mb-6">
+              <Github className="h-6 w-6 text-foreground" />
+              <h2 className="text-2xl font-bold text-foreground">Featured Projects</h2>
             </div>
-          </div>
-        </div>
-      </footer>
+            <p className="text-muted-foreground mb-6">Showcasing 2 featured repositories</p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-background rounded-lg p-4 border border-border hover:shadow-md hover:shadow-[hsl(var(--portfolio-card-shadow-hover))] transition-all duration-200">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="font-semibold text-foreground">FinTech Mobile App</h3>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground" />
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">
+                  A comprehensive mobile banking app focused on simplifying financial management for millennials.
+                </p>
+                <div className="flex items-center justify-between text-xs text-muted-foreground">
+                  <div className="flex items-center gap-4">
+                    <span>⭐ 128</span>
+                    <span>🍴 45</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <span>Figma</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-background rounded-lg p-4 border border-border hover:shadow-md hover:shadow-[hsl(var(--portfolio-card-shadow-hover))] transition-all duration-200">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="font-semibold text-foreground">E-commerce Platform</h3>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground" />
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Complete redesign of an e-commerce platform that increased conversion rates by 35%.
+                </p>
+                <div className="flex items-center justify-between text-xs text-muted-foreground">
+                  <div className="flex items-center gap-4">
+                    <span>⭐ 89</span>
+                    <span>🍴 23</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                    <span>Sketch</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
   );
 };
