@@ -18,9 +18,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        'portfolio-brown': '#000000ff',        // สีน้ำตาลเข้ม (Ganache)
+        'portfolio-brown': '#ffffffff',        // สีน้ำตาลเข้ม (Ganache)
         'portfolio-blue': '#A6C3D6',         // สีฟ้าอ่อน (Nantucket Breeze)
-        'portfolio-bg': '#000000ff',           // สีพื้นหลังหลัก (สีครีมอ่อนๆ)
+        'portfolio-bg': '#ffffffff',           // สีพื้นหลังหลัก (สีครีมอ่อนๆ)
         'portfolio-card-bg': '#A6C3D6',      // สีพื้นหลังของการ์ด (สีขาว)
         'portfolio-text': '#4A352F',          // สีตัวอักษรหลัก (สีน้ำตาลเข้ม)
         'portfolio-text-muted': '#8E827D',  // สีตัวอักษรย่อย (สีเทาอมน้ำตาล)

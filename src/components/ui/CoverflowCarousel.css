@@ -1,0 +1,58 @@
+/* src/components/ui/CoverflowCarousel.css */
+.embla-coverflow {
+  padding: 1rem 0;
+}
+.embla-coverflow__viewport {
+  overflow: hidden;
+}
+.embla-coverflow__container {
+  display: flex;
+  height: 100%;
+  /* ให้ container เริ่มจากตรงกลาง */
+  justify-content: flex-start; 
+}
+.embla-coverflow__slide {
+  flex: 0 0 80%; /* บนจอมือถือ แสดงผลเกือบเต็มจอ */
+  min-width: 0;
+  position: relative;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .embla-coverflow__slide {
+    flex: 0 0 45%; /* บนจอใหญ่ แสดงผลเกือบครึ่งจอ */
+  }
+}
+.embla-coverflow__slide__inner {
+  position: relative;
+  overflow: hidden;
+  height: 224px; /* h-56 */
+  border-radius: 0.75rem; /* rounded-xl */
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+}
+.embla-coverflow__slide__inner:active {
+    cursor: grabbing;
+}
+.embla-coverflow__slide__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.embla-coverflow__slide__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+/* สไตล์พิเศษสำหรับ Experience Card ที่เป็นข้อความ */
+.embla-coverflow__slide__inner.experience-card {
+  background-color: #f0f2f5; 
+  border: 1px solid #e0e0e0;
+  height: auto; 
+  min-height: 224px;
+}

@@ -1,0 +1,38 @@
+/* src/components/ui/ExperienceCarousel.css */
+.embla-exp {
+  padding: 1rem 0;
+}
+.embla-exp__viewport {
+  overflow: hidden;
+}
+.embla-exp__container {
+  display: flex;
+  height: 100%;
+}
+.embla-exp__slide {
+  flex: 0 0 80%; /* บนจอมือถือ แสดงผลเกือบเต็มจอ */
+  min-width: 0;
+  position: relative;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .embla-exp__slide {
+    flex: 0 0 50%; /* บนจอใหญ่ แสดงผลเกือบครึ่งจอ */
+  }
+}
+.embla-exp__slide__inner {
+  position: relative;
+  overflow: hidden;
+  height: auto; 
+  min-height: 240px;
+  border-radius: 1rem; /* rounded-xl */
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+  background-color: #f0f2f5; 
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+}
+.embla-exp__slide__inner:active {
+    cursor: grabbing;
+}
