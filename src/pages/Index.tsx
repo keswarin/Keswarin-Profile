@@ -1,5 +1,6 @@
 // src/pages/Index.tsx
 import React from "react";
+import { Button } from "@/components/ui/button";
 import { ContactButton } from "@/components/ui/ContactButton";
 import { TechStackItem } from "@/components/ui/tech-stack-item";
 import { ExperienceItem } from "@/components/ui/experience-item";
@@ -15,6 +16,7 @@ import {
   Instagram,
   Phone,
   Mail,
+  Download,
   Camera,
   Award,
   Music,
@@ -203,7 +205,21 @@ const Index = () => {
                   feel a little more human.
                 </p>
 
-                {/* ปุ่มดาวน์โหลดถูกเอาออกแล้ว */}
+                {/* ✅ ปุ่มดาวน์โหลด PDF จาก public/resume.pdf */}
+                <Button
+                  className="mt-4 bg-gray-800 text-white font-bold hover:bg-gray-700"
+                  size="sm"
+                  asChild
+                >
+                  <a
+                    href="/resume.pdf"
+                    type="application/pdf"
+                    download="Keswarin-Kositthai-Resume.pdf"
+                  >
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Resume
+                  </a>
+                </Button>
 
                 <div className="space-y-3 mt-4 text-left">
                   <div className="flex items-center gap-2 text-sm">
