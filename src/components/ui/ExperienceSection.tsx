@@ -23,7 +23,7 @@ const experiences = [
   {
     id: 3,
     title: 'Committee Member (Top 7) of the Faculty of Science and Technology, Chiang Mai Rajabhat University',
-    description: '"As one of the top 7 committee members of the Faculty of Science and Technology, Chiang Mai Rajabhat University, I was responsible for collecting membership fees from students during university events. This role required me to manage all financial records with integrity, responsibility, and transparency."',
+    description: '"This project developed a real-time tram tracking system for Chiang Mai Rajabhat University, Mae Rim Campus. The system addresses the issue where users previously could not reliably know the driver’s exact location, and it was designed to fit the specific context and needs of the university."',
     period: '2020 – Present',
     bgColor: '#8B5CF6', // สีม่วง
   },
