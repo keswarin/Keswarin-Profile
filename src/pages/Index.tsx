@@ -144,12 +144,16 @@ const Index = () => {
                 <p className="text-sm text-gray-500 leading-relaxed mt-3">
                   A great design is not just seen, it's felt. It makes the complex simple, the impossible usable, and the digital world feel a little more human.
                 </p>
-                <Button className="mt-4 bg-gray-800 text-white font-bold hover:bg-gray-700" size="sm" asChild>
-                  <a href="/Resume (3).pdf" download>
-                    <Download className="mr-2 h-4 w-4" />
-                    Download Resume
-                  </a>
-                </Button>
+<Button
+  className="mt-4 bg-gray-800 text-white font-bold hover:bg-gray-700"
+  size="sm"
+  asChild
+>
+  <a href="/resume.pdf" download target="_blank" rel="noopener">
+    <Download className="mr-2 h-4 w-4" />
+    Download Resume
+  </a>
+</Button>
 
                 <div className="space-y-3 mt-4 text-left">
                   <div className="flex items-center gap-2 text-sm">
