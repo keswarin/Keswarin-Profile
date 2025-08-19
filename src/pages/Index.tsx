@@ -1,6 +1,5 @@
 // src/pages/Index.tsx
 import React from "react";
-import { Button } from "@/components/ui/button";
 import { ContactButton } from "@/components/ui/ContactButton";
 import { TechStackItem } from "@/components/ui/tech-stack-item";
 import { ExperienceItem } from "@/components/ui/experience-item";
@@ -16,7 +15,6 @@ import {
   Instagram,
   Phone,
   Mail,
-  Download,
   Camera,
   Award,
   Music,
@@ -204,6 +202,8 @@ const Index = () => {
                   complex simple, the impossible usable, and the digital world
                   feel a little more human.
                 </p>
+
+                {/* ปุ่มดาวน์โหลดถูกเอาออกแล้ว */}
 
                 <div className="space-y-3 mt-4 text-left">
                   <div className="flex items-center gap-2 text-sm">
